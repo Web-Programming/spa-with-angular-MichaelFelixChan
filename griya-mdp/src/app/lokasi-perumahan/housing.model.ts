@@ -13,3 +13,4 @@ export interface Housing{
   description?: string;
   postedDays?: number;
 }
+// ? itu kalau isi data nya bersifat opsional(dak ada pun, tidak apa-apa)
