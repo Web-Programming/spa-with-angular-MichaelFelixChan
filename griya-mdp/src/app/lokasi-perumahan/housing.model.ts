@@ -1,6 +1,6 @@
-export interface Housing{
+export interface Housing {
   id: number;
-  name: string;
+  title: string;
   location: string;
   price: number;
   bedrooms: number;
@@ -13,4 +13,3 @@ export interface Housing{
   description?: string;
   postedDays?: number;
 }
-// ? itu kalau isi data nya bersifat opsional(dak ada pun, tidak apa-apa)
