@@ -17,16 +17,19 @@ export class Login {
   successMessage = '';
   errorMessage = '';
 
-  constructor(private fb: FormBuilder, private authService: Auth, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private authService: Auth,
+    private router: Router
+  ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
-  
+
   submitLogin(): void {
     if (this.loginForm.valid) {
-      if (this.loginForm.valid) {
       this.isLoading = true;
       this.errorMessage = '';
       this.successMessage = '';
@@ -60,6 +63,8 @@ export class Login {
             setTimeout(() => {
               this.errorMessage = '';
             }, 5000);
+          }
+        });
     } else {
       console.log('Form is not valid');
       this.errorMessage = 'Mohon lengkapi semua field dengan benar';
